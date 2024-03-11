@@ -22,7 +22,6 @@ struct ContactView: View {
         
         HStack (spacing: hStackSpacing) {
             /// Image
-//            if let avatar = contact.avatar {
             WebImage(url: URL(string: contact.avatar ?? ""))
                     .resizable()
                     .placeholder(Image(Icons.noImage))
@@ -34,7 +33,6 @@ struct ContactView: View {
                     .accessibilityElement()
                     .accessibilityLabel(Text("Person's image"))
                     .accessibilityAddTraits(.isImage)
-//            }
             
             VStack(alignment: .leading, spacing: textSpacing) {
                 

@@ -14,4 +14,5 @@ enum Icons {
     static let noImage = "No Image"
     static let bookmark = "bookmark.circle"
     static let background = "BG"
+    static let errorMessage = "Error Message"
 }

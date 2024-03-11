@@ -27,9 +27,7 @@ class ContactListViewModel: ObservableObject {
     
     /// Get all contact list
     func fetchContactList() {
-        service.fetchContactList { [weak self] result in
-
-//        service.fetchFromAPI([Contact].self) { [weak self] result in
+        service.fetchFromAPI([Contact].self) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let contactList):
@@ -45,21 +43,3 @@ class ContactListViewModel: ObservableObject {
     
 }
 
-
-//MARK: - Preview Helper
-
-extension ContactListViewModel {
-    
-    static func errorState() -> ContactListViewModel {
-        let viewModel = ContactListViewModel()
-        viewModel.errorMessage = APIErrors.url(URLError.init(.notConnectedToInternet)).localizedDescription
-        return viewModel
-    }
-    
-    static func successState() -> ContactListViewModel {
-        let viewModel = ContactListViewModel()
-        viewModel.contactList = [Contact.contact1(), Contact.contact2()]
-        return viewModel
-    }
-    
-}

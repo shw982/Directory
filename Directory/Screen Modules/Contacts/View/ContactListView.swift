@@ -66,15 +66,10 @@ struct ContactListView: View {
                     .opacity((viewModel.contactList.count > 0 ||
                               viewModel.isErrorReceived) ? 0 : 1)
                   
+                /// Show error view when unable to fetch data
+                ErrorView()
+                    .opacity(viewModel.isErrorReceived ? 1 : 0)
             }
-            .alert(isPresented: $viewModel.isErrorReceived, content: {
-                Alert(title: Text("Error in fetching data..."),
-                      message: Text("Please try again."),
-                      primaryButton: .cancel(),
-                      secondaryButton: .default(Text("Try again")) {
-                    viewModel.fetchContactList()
-                })
-            })
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

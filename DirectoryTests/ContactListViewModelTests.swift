@@ -48,7 +48,6 @@ final class ContactListViewModelTests: XCTestCase {
         
         mockService.jsonFileName = JsonMockResponses.contactList.rawValue
       
-//        mockService.fetchContactList { result in
         mockService.fetchFromAPI([Contact].self) { result in
             switch result {
             case .success(let list):
@@ -68,10 +67,9 @@ final class ContactListViewModelTests: XCTestCase {
         
         mockService.jsonFileName = JsonMockResponses.invalidContactList.rawValue
        
-//        mockService.fetchContactList { result in
         mockService.fetchFromAPI([Contact].self) { result in
             switch result {
-            case .success(let contacts):
+            case .success(_):
                 XCTFail("Expected to be a failed test but got a success instead.")
             case .failure(let error):
                 XCTAssertNotNil(error)

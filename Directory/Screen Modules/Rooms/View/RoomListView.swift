@@ -57,15 +57,12 @@ struct RoomListView: View {
                 LoadingSpinner(scaleFactor: Constants.progressViewScaleFactor)
                     .opacity((viewModel.roomList.count > 0 || 
                               viewModel.isErrorReceived) ? 0 : 1)
+                
+                /// Show error view when unable to fetch data
+                ErrorView()
+                    .opacity(viewModel.isErrorReceived ? 1 : 0)
             }
-            .alert(isPresented: $viewModel.isErrorReceived, content: {
-                Alert(title: Text(Strings.Alert.title),
-                      message: Text(Strings.Alert.message),
-                      primaryButton: .cancel(),
-                      secondaryButton: .default(Text(Strings.Alert.tryAgain)) {
-                    viewModel.fetchRoomList()
-                })
-            })
+            
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

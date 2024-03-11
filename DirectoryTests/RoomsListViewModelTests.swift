@@ -21,7 +21,7 @@ final class RoomsListViewModelTests: XCTestCase {
         mockService = APIMockService()
         sut = RoomListViewModel(service: mockService)
     }
-
+    
     /// TearDown
     override func tearDown() {
         super.tearDown()
@@ -29,7 +29,7 @@ final class RoomsListViewModelTests: XCTestCase {
         mockService = nil
         sut = nil
     }
-
+    
     
     /// Read from JSON file
     func testJsonFileNotFound() {
@@ -47,9 +47,8 @@ final class RoomsListViewModelTests: XCTestCase {
         let expectation = self.expectation(description: "Fetching room list")
         
         mockService.jsonFileName = JsonMockResponses.roomList.rawValue
-      
-//        mockService.fetchRoomList { result in
-      mockService.fetchFromAPI([Room].self) { result in
+        
+        mockService.fetchFromAPI([Room].self) { result in
             switch result {
             case .success(let rooms):
                 XCTAssertTrue(rooms.count > 0)
@@ -61,18 +60,17 @@ final class RoomsListViewModelTests: XCTestCase {
         
         waitForExpectations(timeout: 10, handler: nil)
     }
-
+    
     
     /// Decoding error test
     func testDecodingErrorWhileFetchingContactList() {
         let expectation = self.expectation(description: "Testing decoding error while fetching room list")
         
         mockService.jsonFileName = JsonMockResponses.invalidRoomList.rawValue
-       
+        
         mockService.fetchFromAPI([Room].self) { result in
-//        mockService.fetchContactList { result in
             switch result {
-            case .success(let contacts):
+            case .success(_):
                 XCTFail("Expected to be a failed test but got a success instead.")
             case .failure(let error):
                 XCTAssertNotNil(error)

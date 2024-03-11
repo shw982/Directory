@@ -13,7 +13,7 @@ class RoomListViewModel: ObservableObject {
     @Published var roomList = [Room]()
     @Published var isErrorReceived: Bool = false
     @Published var errorMessage: String?
-  
+    
     let service: APIServiceProtocol
     
     /// Initializer
@@ -24,8 +24,6 @@ class RoomListViewModel: ObservableObject {
     
     /// Get all room list
     func fetchRoomList() {
-//        service.fetchRoomList { [weak self] result in
-        
         service.fetchFromAPI([Room].self) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
