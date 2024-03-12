@@ -2,7 +2,7 @@ Directory App is completely build in SwiftUI using MVVM design pattern (using Sw
 
 
 This app has 4 basic screen components:
-  1. Tab View: 
+  1. Tab View
     - Has 2 tabs within it i.e. Contacts tab and Rooms tab.
 
   2. Contact List View
