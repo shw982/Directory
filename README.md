@@ -1,5 +1,6 @@
 Directory App is completely build in SwiftUI using MVVM design pattern (using Swift 5.0+ & targeting iOS 14.7). 
 
+
 This app has 4 basic screen components:
   1. Tab View: 
     - Has 2 tabs within it i.e. Contacts tab and Rooms tab.
@@ -13,7 +14,9 @@ This app has 4 basic screen components:
   4. Rooms List View
     - Shows list of all rooms fetched from API.
 
+
 Along with the 4 main screens, a search feature is also implemented on Contact List and Room List screens. Using search feature, user can search for a contact based on contact's firstname and search for a room based on room's ID respectively.
+
 
 - This app has been made compatible for all iOS devices i.e. iPhones and iPad.
 - Accessibility feature of iOS has also been implemented in order to make the app more accessible.
