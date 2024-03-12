@@ -21,7 +21,7 @@ struct RoomView: View {
         
         HStack(spacing: hStackSpacing) {
             /// Icon
-            Image(systemName: Icons.bookmark)
+            Image(systemName: Icons.roomIcon)
                 .resizable()
                 .scaledToFill()
                 .frame(width: iconSize, height: iconSize)

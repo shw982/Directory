@@ -12,7 +12,8 @@ enum Icons {
     static let tabContact = "person.3.fill"
     static let tabRooms = "Room"
     static let noImage = "No Image"
-    static let bookmark = "bookmark.circle"
+    static let roomIcon = "bookmark.circle"
     static let background = "BG"
-    static let errorMessage = "Error Message"
+    static let info = "Info"
+    static let noInternet = "No Internet"
 }

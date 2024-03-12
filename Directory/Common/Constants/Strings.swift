@@ -14,10 +14,6 @@ enum Strings {
         static let rooms = "Rooms"
     }
     
-    struct Error {
-        static let tryAgain = "Something went wrong. Please try again!"
-    }
-    
     struct Loading {
         static let loading = "Loading..."
         
@@ -70,10 +66,9 @@ enum Strings {
         }
     }
     
-    struct Alert {
-        static let title = "Error!"
-        static let message = "Something went wrong in fetching data.."
-        static let tryAgain = "Try again"
+    struct Error {
+        static let noInternetMessage = "Network connection seems to be offline. Please check your connectivity."
+        static let noDataFound = "Unable to show information. Please try again later."
     }
     
 }

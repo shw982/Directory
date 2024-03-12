@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "ErrorMessage.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Info.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

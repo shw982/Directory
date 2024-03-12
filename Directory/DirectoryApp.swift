@@ -10,9 +10,12 @@ import SwiftUI
 
 @main
 struct DirectoryApp: App {
+    @StateObject var networkMonitor = NetworkMonitor()
+    
     var body: some Scene {
         WindowGroup {
             HomeTabView()
+                .environmentObject(networkMonitor)
         }
     }
 }
