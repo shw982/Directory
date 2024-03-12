@@ -22,3 +22,4 @@ Along with the 4 main screens, a search feature is also implemented on Contact L
 - Accessibility feature of iOS has also been implemented in order to make the app more accessible.
 - Unit test has also been covered.
 - UI for dark theme and light theme has also been taken into consideration.
+- Error cases and no internet connection cases are also taken care of.
