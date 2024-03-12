@@ -170,8 +170,7 @@ struct ContactDetailView: View {
                 
                 Spacer()
             }
-//            .padding(EdgeInsets(top: 0, leading: vStackSpacing, bottom: 0, trailing: vStackSpacing))
-            .padding(.vertical, vStackSpacing)
+            .padding(.horizontal, vStackSpacing)
             
             Spacer()
         }

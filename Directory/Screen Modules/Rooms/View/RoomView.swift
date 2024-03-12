@@ -12,7 +12,7 @@ struct RoomView: View {
     let room: Room
     let viewModel: RoomListViewModel
     
-    let iconSize: CGFloat = UIDevice.iPad ? 50 : 30
+    let iconSize: CGFloat = UIDevice.iPad ? 50 : 25
     let textSpacing: CGFloat = UIDevice.iPad ? 15 : 5
     let hStackSpacing: CGFloat = UIDevice.iPad ? 20 : 10
     let vStackPadding: CGFloat = UIDevice.iPad ? 20 : 10
@@ -20,16 +20,19 @@ struct RoomView: View {
     var body: some View {
         
         HStack(spacing: hStackSpacing) {
-            /// Icon
-            Image(systemName: Icons.roomIcon)
-                .resizable()
-                .scaledToFill()
-                .frame(width: iconSize, height: iconSize)
-                .clipped()
-                .offset(y: -iconSize)
-                .accessibilityElement()
-                .accessibilityLabel(Text("Room Icon"))
-                .accessibilityAddTraits(.isImage)
+            VStack {
+                /// Icon
+                Image(systemName: Icons.roomIcon)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: iconSize, height: iconSize)
+                    .clipped()
+                    .accessibilityElement()
+                    .accessibilityLabel(Text("Room Icon"))
+                    .accessibilityAddTraits(.isImage)
+                    .padding(.top, 5)
+                Spacer()
+            }
             
             VStack(alignment: .leading, spacing: textSpacing) {
                 /// Room ID

@@ -39,7 +39,7 @@ enum APIRouter {
     private func getURL() -> URL {
         let properties = self.properties
         
-        var url = URL(string: Constants.baseUrl)!
+        var url = Environment.baseUrl
         url.appendPathComponent(properties.apiVersion.rawValue)
         url.appendPathComponent(properties.endPoint)
         return url

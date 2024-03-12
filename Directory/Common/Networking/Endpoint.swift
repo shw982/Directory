@@ -9,6 +9,6 @@ import Foundation
 
 enum Endpoint: String {
     
-    case contact = "contact"
+    case contact = "people"
     case rooms = "rooms"
 }

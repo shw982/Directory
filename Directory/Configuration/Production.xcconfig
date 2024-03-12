@@ -1,0 +1,11 @@
+//
+//  Production.xcconfig
+//  Directory
+//
+//  Created by Sweta Jaiswal on 12/03/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = https:/$()/61e947967bc0550017bc61bf.mockapi.io/api/
