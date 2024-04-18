@@ -14,7 +14,7 @@ struct ContactDetailView: View {
     let contact: Contact
     
     let bgHeight: CGFloat = UIDevice.iPad ? UIScreen.main.bounds.height * 0.23 : UIScreen.main.bounds.height * 0.25
-    let imageSize: CGFloat = UIDevice.iPad ? UIScreen.main.bounds.width * 0.38 : UIScreen.main.bounds.width * 0.5
+    let imageSize: CGFloat = UIDevice.iPad ? UIScreen.main.bounds.width * 0.3 : UIScreen.main.bounds.width * 0.5
     
     var yOffset: CGFloat { (imageSize/2) + 30 }
     let textSpacing: CGFloat = UIDevice.iPad ? 15 : 10
