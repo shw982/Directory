@@ -18,8 +18,14 @@ This app has 4 basic screen components:
 Along with the 4 main screens, a search feature is also implemented on Contact List and Room List screens. Using search feature, user can search for a contact based on contact's firstname and search for a room based on room's ID respectively.
 
 
-- This app has been made compatible for all iOS devices i.e. iPhones and iPad.
-- Accessibility feature of iOS has also been implemented in order to make the app more accessible.
-- Unit test has also been covered.
-- UI for dark theme and light theme has also been taken into consideration.
-- Error cases and no internet connection cases are also taken care of.
+
+* List of features implemented in Directory App:
+	- Search features on Contact and Room list screens
+	- Compatibility for all iOS devices i.e. iPhones and iPad
+	- Accessibility feature of iOS in order to make the app more accessible
+	- Unit tests has also been covered
+	- UI for dark and light theme
+	- Handling of any error occurred & no internet connection case
+	- Added configurations for Dev, Staging and Production environments
+
+
